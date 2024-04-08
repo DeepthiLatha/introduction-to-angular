@@ -1,0 +1,65 @@
+/* List OF Songs CSS */
+.list ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+.list ul li a{
+    width: 18rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background:#2a2b6a;
+    color:#ffffff;
+}
+.list li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+.content{
+    padding: .5rem 1rem;
+    display: none;
+}
+.name{
+    padding-bottom: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(202, 114, 133);
+}
+
+/* List of Songs End */
+
+/* Home Header CSS start */
+.homeHeader{
+    background-image: url(src/assets/music-img.jpeg);
+    height: 80px;
+    display: flex;
+    justify-content:space-between;
+}
+.homeHeader ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+.homeHeader ul li a{
+    width: 6rem;
+     margin: 0.5rem;
+     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+   color:#ffffff;
+}
+.homeHeader ul li a:hover{
+    color:rgb(219, 101, 111);
+    font-size: 23px;
+}
+
+/* Home Header end */

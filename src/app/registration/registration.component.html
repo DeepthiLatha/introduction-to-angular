@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="registration">
+    <h1>Registration Form</h1>
+<label for="email">Email - </label>
+<input id="email" #email placeholder="Enter email">
+<label for="number">Phone Number - </label>
+<input type="text" #number placeholder="Enter Phonenumber">
+<label for="password">Password - </label>
+<input type="password" #password placeholder="Enter Password">
+
+<button  (click)="register(email.value, number.value, password.value)">Register</button>
+<!-- <button (click)="searchHousingLocations(search.value)">Search</button> -->
+</div>
+  
