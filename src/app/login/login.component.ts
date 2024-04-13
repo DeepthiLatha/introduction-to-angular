@@ -6,24 +6,32 @@ import { AuthService } from 'src/app/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
 
-  email: string = '';
-  password: string = '';
+export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+  
+    
   }
 
-  login(): void {
-    const isAuthenticated = this.authService.loginUser(this.email, this.password);
-    if (isAuthenticated) {
-      console.log('Login successful');
-      // You can navigate to another component or perform other actions upon successful login
-    } else {
-      console.log('Invalid email or password');
-      // You can show an error message to the user
+  login(phoneNumber: string, password: string): void {
+    if (phoneNumber && password) {
+      //console.log(phoneNumber, password);
+    }
+    const jsonData = localStorage.getItem("userData");
+
+    console.log(jsonData);
+    if (jsonData) {
+      const retrievedData = JSON.parse(jsonData);
+      console.log(retrievedData);
     }
   }
 }
+
+// Retrieve the JSON string from local storage using the key
+
+
+
+

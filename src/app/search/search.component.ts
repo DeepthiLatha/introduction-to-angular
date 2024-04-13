@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -9,12 +11,17 @@ export class SearchComponent implements OnInit {
 
 searchSong:string = '';
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params =>{
+      if(params['searchSong'])
       this.searchSong = params['searchSong'];
     })
+  }
+  search(): void{
+    if (this.searchSong)
+      this.router.navigateByUrl('/serach/' + this.searchSong)
   }
 
 }

@@ -1,21 +1,26 @@
 import { Injectable } from '@angular/core';
-import { RegistrationData } from 'src/app/registration-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private userRegistrationData: RegistrationData[] = [];
-
   constructor() { }
 
-  registerUser(registrationData: RegistrationData): void {
-    this.userRegistrationData.push(registrationData);
+  register(email: string, phoneNumber: string, password: string): boolean {
+    return true;
   }
 
-  loginUser(email: string, password: string): boolean {
-    const user = this.userRegistrationData.find(u => u.email === email && u.password === password);
-    return !!user; 
+  login(email: string, password: string): boolean {
+    return true;
+  }
+
+  logout(): void {
+    
+    localStorage.removeItem('userDetails');
+  }
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('userDetails');
   }
 }

@@ -1,39 +1,47 @@
-<div class="homeHeader">
- <h1 style="color:rgb(211, 115, 136);display:flex;align-items:center;font-size:35px;font-weight:700"> Music Player </h1>
+<div class="block">
 
-<ul>
-    <li>
-        <a href="/home">Home</a>
-    </li>
-    <li>
-        <a href="/playlist">PlayList</a>
-    </li>
-    <li>
-        <a href="/logout">Logout</a>
-    </li>
-</ul>
+    <div class="homeHeader">
+        <h1 style="color:#e23a3a;display:flex;align-items:center;font-size:35px;font-weight:700; text-shadow: 5px 2px 4px rgba(241, 241, 241, 0.5);"> Music Player </h1>
 
-</div>
+        <ul>
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li>
+                <a routerLink="/playlist">PlayList</a>
+            </li>
+            <li>
+                <a routerLink="/logout">Logout</a>
+            </li>
+        </ul>
+
+    </div>
 
 
-<div class="list">
-<ul> 
-    <li *ngFor="let song of songs">
-        <a>
-        <img src="{{song.imageUrl}}" alt="song images"></a>
-        <div class="content" >
-            <div class="name">
-               {{song.name}}
-            </div>
-            <div class="singer">
-                {{song.singer}},
-                {{song.musicDirector}}<br>
-                {{song.releaseDate}}
-            </div>
-            <div class="album">
-                {{song.album}}
-            </div>
-        </div>
-    </li>
-</ul>
+    <app-search></app-search>
+
+    <div class="list">
+        <ul>
+            <li *ngFor="let song of songs">
+                <a>
+                    <img src="{{song.imageUrl}}" alt="song images">
+                    <div class="content">
+                        <div class="name">
+                            {{song.name}}
+                        </div>
+                        <div class="singer">
+                            {{song.singer}},
+                            {{song.musicDirector}}<br>
+                            {{song.releaseDate}}
+                        </div>
+                        <div class="album">
+                            {{song.album}}
+                        </div>
+
+                    </div>
+
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

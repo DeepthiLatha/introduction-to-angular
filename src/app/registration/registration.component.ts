@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrationData } from 'src/app/registration-data'
+import { Router } from '@angular/router';
+import { RegistrationData } from 'src/app/registration-data';
+
+let userRegistrationData: RegistrationData[] = [];
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -7,25 +11,41 @@ import { RegistrationData } from 'src/app/registration-data'
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  userRegistrationData : RegistrationData[] = []
-   
-  register ( email:string, phoneNumber:string, password:string ){
+ 
+ 
+
+  register(email: string, phoneNumber: string, password: string, role: string = 'user') {
+    if (!email || !phoneNumber || !password) {
+      alert('Please enter all inputs');
+      return;
+    }
 
     const registrationObject = {
       email,
       phoneNumber,
-      password
-    }
+      password,
+      role
+    };
 
-    this.userRegistrationData.push(registrationObject);
+    userRegistrationData.push(registrationObject);
 
-    console.log(this.userRegistrationData);
+    console.log(userRegistrationData);
+
+    this.router.navigate(['/login']); 
 
   }
 
 }
+
+
+
+
+const jsonData = JSON.stringify(userRegistrationData);
+
+// Store it in local storage under a specific key
+localStorage.setItem("userData", jsonData);

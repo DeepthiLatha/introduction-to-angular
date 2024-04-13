@@ -1,24 +1,69 @@
-.registration{
+.reg {
+    background-image: url('src\assets\bg-img 1.webp');
+    background-size: cover;
+    height: 660px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.logo ul {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+a:hover {
+    color: #e72929;
+    font-size: 22px;
+}
+
+
+.registration {
     display: flex;
     flex-direction: column;
-    margin: 50px auto 0 ;
+    margin: 50px auto 0;
     padding: 30px;
     width: 400px;
-    border: 2px solid black;
-    
+    border: 2px solid #fff;
 }
-h1{
+
+h1 {
     text-align: center;
+    color: #fff;
 }
-input{
+
+input {
     font-size: 15px;
     padding: 8px;
+    border-radius: .5rem;
 }
-label{
-   padding-top: 20px;    
+
+label {
+    padding-top: 20px;
+    font-weight: bold;
 }
-button{
-    margin: 20px auto 0;
+
+button {
+    margin: 20px 60px 0;
     width: 200px;
     background-color: rgb(3, 75, 104);
     padding: 10px;
@@ -27,6 +72,6 @@ button{
     font-size: 20px;
 }
 
-p{
+p {
     text-align: center;
 }

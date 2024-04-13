@@ -1,13 +1,28 @@
-<app-header></app-header>
-<div class="login">
-    <h1>Login Form</h1>
-<label for="number">Phone Number - </label>
-<input type="text" #number placeholder="Enter Phonenumber">
-<label for="password">Password - </label>
-<input type="password" #password placeholder="Enter Password">
+<div class="log">
+    <div class="logo">
 
-<a href="/home" class="loginPage">Login</a>
+        <a style="color:#e72929;display:flex;align-items:center;font-size:35px;font-weight:700;text-shadow: 2px 2px 4px rgba(241, 241, 241, 0.5);"
+            routerLink=""> Music Player</a>
+        <ul>
+            <li>
+                <a routerLink="/registration">Register</a>
+            </li>
 
-<!-- <button (click)="searchHousingLocations(search.value)">Search</button> -->
+            <li>
+                <a routerLink="/login">Login</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="login">
+        <h1>Login Form</h1>
+        <label for="number">Phone Number - </label>
+        <input type="text" #number placeholder="Enter Phonenumber">
+        <label for="password">Password - </label>
+        <input type="password" #password placeholder="Enter Password">
+
+        <a routerLink="/home" (click)="login(number.value, password.value)" class="loginPage">Login</a>
+
+    </div>
 </div>
-  

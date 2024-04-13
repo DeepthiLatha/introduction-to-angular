@@ -16,7 +16,8 @@ export class SongService {
         musicDirector:'Chris Applebaum',
         releaseDate: '2011',
         album:'When the Sun Goes Down',
-        imageUrl:'/assets/img-1.jpg'
+        imageUrl:'/assets/img-1.jpg',
+        addSong:'Add to Playlist'
       },
       {
         name:'Senorita',
@@ -24,7 +25,8 @@ export class SongService {
         musicDirector:'Andrew Watt',
         releaseDate:'2018', 
         album:'Shawn Mendes',
-        imageUrl:'/assets/img-2.jpg'
+        imageUrl:'/assets/img-2.jpg',
+        addSong:'Add to Playlist'
       },
       {
         name:'She Dont Know',
@@ -32,7 +34,8 @@ export class SongService {
         musicDirector:'',
         releaseDate: '2019',
         album:'Blessed' ,
-        imageUrl:'/assets/img-3.jpg'
+        imageUrl:'/assets/img-3.jpg',
+        addSong:'Add to Playlist'
       },
       {
         name:'Im In Love With The Shape Of You',
@@ -40,39 +43,44 @@ export class SongService {
         musicDirector:'DJ Tempa',
         releaseDate:'2017',
         album:'Divide',
-        imageUrl:'/assets/img-4.jpg'
+        imageUrl:'/assets/img-4.jpg',
+        addSong:'Add to Playlist'
       },
       {
         name:'On My Way',
         singer:'Khasa Aala Chahar',
         musicDirector:' Ghanu',
-        releaseDate:'20',
-        album:'On My Way',
-        imageUrl:'/assets/img-5.jpg'
+        releaseDate:'2021',
+        album:'World of Walker',
+        imageUrl:'/assets/img-5.jpg',
+        addSong:'Add to Playlist'
       },
       {
-        name:'',
-        singer:'',
-        musicDirector:'',
-        releaseDate:'',
-        album:'',
-        imageUrl:'/assets/img-6.jpg'
+        name:'Serena-Safari',
+        singer:'Serena',
+        musicDirector:'Mircea Nistor',
+        releaseDate:'2017',
+        album:'Safari',
+        imageUrl:'/assets/img-6.jpg',
+        addSong:'Add to Playlist'
       },
       {
-        name:'',
-        singer:'',
-        musicDirector:'',
-        releaseDate:'',
-        album:'',
-        imageUrl:'/assets/img-7.jpg'
+        name:'Cheap Thrills',
+        singer:'Sean Paul ',
+        musicDirector:'Sia',
+        releaseDate:'2017',
+        album:'Summer Beats',
+        imageUrl:'/assets/img-7.jpg',
+        addSong:'Add to Playlist'
       },
       {
-        name:'',
-        singer:'',
-        musicDirector:'',
-        releaseDate:'', 
-        album:'',
-        imageUrl:'/assets/img-8.jpg'
+        name:'Baby',
+        singer:'Justin Bieber',
+        musicDirector:'Justin Bieber',
+        releaseDate:'2010', 
+        album:'Baby',
+        imageUrl:'/assets/img-8.jpg',
+        addSong:'Add to Playlist'
       }
     ];
     

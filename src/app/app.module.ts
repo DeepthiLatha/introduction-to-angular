@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HousingListComponent } from './housing-list/housing-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +9,9 @@ import { RouterModule,Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { PlaylistComponent } from './playlist/playlist.component';
+import { LogoutComponent } from './logout/logout.component';
+
+
 
 const routes:Routes=[
   {
@@ -26,23 +28,28 @@ const routes:Routes=[
   },
   {
     path:'playlist',component:PlaylistComponent
+  },
+  {
+    path:'logout',component:LogoutComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HousingListComponent,
     RegistrationComponent,
     LoginComponent,
     HomeComponent,
     SearchComponent,
     HeaderComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    // LogoutComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    FormsModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

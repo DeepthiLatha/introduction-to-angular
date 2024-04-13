@@ -5,4 +5,5 @@ export class Songs{
     releaseDate!: string;
     album!:string;
     imageUrl!:string;
+    addSong!:string;
 }

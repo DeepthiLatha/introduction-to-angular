@@ -20,6 +20,5 @@ throw new Error('Method not implemented.');
   ngOnInit(): void {
     this.songs = this.ss.getAll();
   }
-      
-}  
 
+}  
