@@ -11,20 +11,23 @@
             <li>
                 <a routerLink="/login">Login</a>
             </li>
-
-        </ul>
+         </ul>
 
     </div>
 
     <div class="registration">
-        <h1>Registration Form</h1>
-        <label for="email">Email - </label>
-        <input id="email" #email placeholder="Enter email">
-        <label for="number">Phone Number - </label>
-        <input type="text" #number placeholder="Enter Phonenumber">
-        <label for="password">Password - </label>
-        <input type="password" #password placeholder="Enter Password">
-
-        <button (click)="register(email.value, number.value, password.value)">Register</button>
+        <h2>Registration</h2>
+        <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" ngModel required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" ngModel required>
+            </div>
+            <button type="submit" [disabled]="!registerForm.valid">Register</button>
+        </form>
     </div>
-</div>
+    
+    </div>

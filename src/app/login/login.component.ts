@@ -1,27 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { UserDataService } from '../user-data.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+export class LoginComponent {
 
+  constructor(private router: Router) { }
 
-
-export class LoginComponent implements OnInit {
-
-  constructor(private userDataService: UserDataService) { } // Inject the StorageService
-
-  ngOnInit(): void {
+  onLogin() {
+    const username = (document.getElementById('username') as HTMLInputElement).value;
+    const password = (document.getElementById('password') as HTMLInputElement).value;
+    const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
     
-  }
-  login(phoneNumber: string, password: string): void {
-    if (phoneNumber && password) {
-      console.log(phoneNumber, password);
+    if (username === storedUser.username && password === storedUser.password) {
+      console.log('Login successful');
+     this.router.navigate(['/home']);
+
+    } else {
+      console.log('Login failed');
+     
+      const errorMsg = (document.getElementById('invalidCredMsg') as HTMLInputElement).style.display = "block";
     }
-    const retrievedData = this.userDataService.getData(); // Use the service to retrieve data
-  
-    console.log(retrievedData);
-  }  
+  }
 }

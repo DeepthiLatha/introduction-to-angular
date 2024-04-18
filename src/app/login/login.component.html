@@ -16,13 +16,23 @@
     </div>
 
     <div class="login">
-        <h1>Login Form</h1>
-        <label for="number">Phone Number - </label>
-        <input type="text" #number placeholder="Enter Phonenumber">
-        <label for="password">Password - </label>
-        <input type="password" #password placeholder="Enter Password">
-
-        <a routerLink="/home" (click)="login(number.value, password.value)" class="loginPage">Login</a>
-
+        <div>
+            <h2>Login</h2>
+            <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+              <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" ngModel required>
+              </div>
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" ngModel required>
+              </div>
+              <button type="submit" [disabled]="!loginForm.valid">Login</button>
+            </form>
+          </div>
+          <div class="invalidCred" id="invalidCredMsg">
+            <h1>Please Try again Invalid Credentials</h1>
+          </div>
+          
     </div>
 </div>

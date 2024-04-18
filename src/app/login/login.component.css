@@ -83,3 +83,7 @@ button {
     text-align: center;
     font-weight: bold;
 }
+
+.invalidCred{
+    display: none;
+}
