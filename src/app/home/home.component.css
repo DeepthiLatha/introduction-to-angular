@@ -8,7 +8,7 @@
     padding: 0;
 }
 .list ul li a{
-    height: 26rem;
+    height: 28rem;
     width: 18rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
@@ -19,7 +19,7 @@
     color:#ffffff;
 }
 .list li a:hover{
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .content{
@@ -68,6 +68,7 @@
 }
 
 /* Home Header end */
+
 .block{
     background-image: url('src\assets\bg-img 1.webp');
     background-size: cover;

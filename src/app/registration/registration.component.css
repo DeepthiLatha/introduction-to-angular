@@ -41,9 +41,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     margin: 50px auto 0;
-    padding: 40px;
+    padding: 34px;
     width: 400px;
     border: 2px solid #fff;
+    border-radius: 30px;
 }
 
 h2 {
@@ -57,21 +58,27 @@ input {
     font-size: 15px;
     padding: 8px;
     border-radius: .5rem;
+    margin: 15px;
 }
 
 label {
     padding-top: 20px;
     font-weight: bold;
     color: #fff;
+    font-size: 18px;
 }
 
 button {
-    margin: 20px 60px 0;
+    margin: 20px 60px;
     width: 200px;
     background-color: rgb(3, 75, 104);
     padding: 10px;
     border-radius: 50px;
     color: white;
     font-size: 20px;
+}
+.registration-success{
+    color: #fff;
+    text-align: center;
 }
 

@@ -44,32 +44,37 @@ a:hover {
     padding: 30px;
     width: 400px;
     border: 2px solid #fff;
+    border-radius: 30px;
 }
 
-h1 {
+h2 {
     text-align: center;
-    color: #fff;
+    color: #e72929;
+    font-size: 40px;
 }
 
 input {
     font-size: 15px;
     padding: 8px;
     border-radius: .5rem;
+    margin: 15px;
 }
 
 label {
     padding-top: 20px;
     font-weight: bold;
+    color: #fff;
+    font-size: 18px;
 }
 
 button {
-    margin: 20px auto 0;
-    width: 200px;
+    width: 150px;
     background-color: rgb(3, 75, 104);
     padding: 10px;
     border-radius: 50px;
     color: white;
     font-size: 20px;
+   margin: 20px 0 20px 90px;
 }
 
 .loginPage {
@@ -86,4 +91,11 @@ button {
 
 .invalidCred{
     display: none;
+    font-size: .5rem;
+    text-align: center;
+    border: solid;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: red;
 }
+

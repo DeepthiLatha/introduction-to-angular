@@ -28,6 +28,7 @@
             </div>
             <button type="submit" [disabled]="!registerForm.valid">Register</button>
         </form>
+        <div *ngIf="registrationMessage" class="registration-success">{{ registrationMessage }}</div>
     </div>
     
     </div>

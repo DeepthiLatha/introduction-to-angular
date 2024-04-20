@@ -4,7 +4,11 @@ import { Songs } from 'src/app/add/models/song';
 @Injectable({
   providedIn: 'root'
 })
-export class SongService { 
+export class SongService {
+  searchSongs: any;
+  getSongs(Songs: string) {
+    throw new Error('Method not implemented.');
+  } 
 
   constructor() { }
 

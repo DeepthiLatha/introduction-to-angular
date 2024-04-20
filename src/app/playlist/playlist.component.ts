@@ -1,65 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Component } from '@angular/core';
-import { PlaylistService } from '../playlist.service';
 
 @Component({
-  selector: 'app-playlist',
-  templateUrl: './playlist.component.html',
-  styleUrls: ['./playlist.component.css']
+    selector: 'app-playlist',
+    templateUrl: './playlist.component.html',
+    styleUrls: ['./playlist.component.css']
 })
-export class PlaylistComponent {
-  playlists: any[] = [];
-  newPlaylistName: string = '';
+export class PlaylistComponent implements OnInit {
+    
+    playlists: string[] = [];
 
-  constructor(private playlistService: PlaylistService) {
-    this.playlists = this.playlistService.getPlaylists();
-  }
+    addSong: string[] = [];
 
-  createPlaylist(): void {
-    if (this.newPlaylistName.trim() !== '') {
-      this.playlistService.createPlaylist(this.newPlaylistName);
-      this.newPlaylistName = '';
-      this.playlists = this.playlistService.getPlaylists();
+  
+    newPlaylistName: string = ''; 
+
+    constructor(private router: Router) { }
+
+    ngOnInit(): void {
     }
-  }
+    addSongs(playlistName: string): void {
+    console.log(playlistName);
 
-  viewPlaylist(playlist: any): void {
-    console.log('Viewing playlist:', playlist);
-  }
+        this.router.navigate(['/home']);
+
+    }
+    createPlaylist(): void {
+        if (this.newPlaylistName.trim() !== '') {
+            this.playlists.push(`${this.newPlaylistName.trim()}`);
+            this.playlists.push("+ Add Songs")
+            this.newPlaylistName = ''; 
+        }
+    }
 }
-
-
-
-
-
-
-
-// import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute } from '@angular/router';
-// import { Songs } from '../add/models/song';// Import Song model
-
-// @Component({
-//   selector: 'app-playlist',
-//   templateUrl: './playlist.component.html',
-//   styleUrls: ['./playlist.component.css']
-// })
-// export class PlaylistComponent implements OnInit {
-//   playlists: any[] = []; // Initialize playlists array
-
-//   constructor(private route: ActivatedRoute) {}
-
-//   ngOnInit(): void {
-//     this.route.queryParams.subscribe(params => {
-//       const selectedSong = JSON.parse(params['selectedSong']); // Get selected song from query params
-//       this.addSongToPlaylist(selectedSong);
-//     });
-//   }
-
-//   addSongToPlaylist(song: Songs): void {
-//     // Logic to add the selected song to one or more playlist folders
-//     // You can implement this logic based on user interaction or predefined rules
-//     // For example, you can have a button to add the song to a specific playlist folder
-//   }
-// }
-
-

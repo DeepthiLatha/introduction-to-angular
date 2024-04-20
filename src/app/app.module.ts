@@ -12,7 +12,6 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { LogoutComponent } from './logout/logout.component';
 
 
-
 const routes:Routes=[
   {
     path:'',component:HeaderComponent
@@ -43,13 +42,13 @@ const routes:Routes=[
     SearchComponent,
     HeaderComponent,
     PlaylistComponent,
-    // LogoutComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

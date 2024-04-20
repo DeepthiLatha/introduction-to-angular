@@ -1,4 +1,4 @@
-export class Songs{
+export class Songs {
     name!:string;
     singer!:string;
     musicDirector!:string;
